@@ -5,6 +5,7 @@ import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 import geopandas as gpd
+import streamlit as st
 from features_functions import def_gender,get_feature_total_medals,get_feature_gold_medals,get_feature_gender,get_feature_collective,get_feature_categories_diverse
 from display_functions import print_3d_clusters,show_feature_to_pca,create_cluster_feature_heatmap,generate_map,crop_image,elbow_chart
     
@@ -95,6 +96,7 @@ def fill_groups(df_sym_cluster):
 
 if __name__ == "__main__":
 
+    st.write('hello')
     # Abre o dataframe com todos os dados
     df = pd.read_excel('olympic_medal_table_2024_v1.xlsx')
 
@@ -165,6 +167,6 @@ if __name__ == "__main__":
     show = True
     generate_map(world,optimal_k,labels,show)
     show = False
-    
+
     # TODO remover os eixos sem precisar cortar as imagens
     crop_image(show)
