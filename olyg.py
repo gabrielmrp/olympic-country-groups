@@ -110,7 +110,7 @@ if __name__ == "__main__":
         .techinfo{color: lightblue;margin-left:2em}
         .alert{color: yellow}
         ul { margin: 0}
-        iframe{max-height: 62px;}
+
     </style>
 
     """,
@@ -153,18 +153,11 @@ if __name__ == "__main__":
     st.write('Os dados apresentados na tabela de medalhas são organizados em três níveis: Países, Esporte e Medalha, com cada linha representando uma medalha. Abaixo, vamos exemplificar esses níveis usando como exemplo a medalha de ouro de Rebeca Andrade no solo.')
 
     # Lê os nomes dos países a serem substituidos
-    
 
     def st_show_dataframe_compacted(series_aux, columns):
-
         df_aux = pd.DataFrame(series_aux).T
         df_aux = df_aux[columns]
-
-        gb = GridOptionsBuilder.from_dataframe(df_aux)
-        gb.configure_default_column(autoSizeColumns=True,groupable=False, value=False, enableRowGroup=False, aggFunc='sum', editable=False,configure_auto_height=False)
-        gb.configure_grid_options(domLayout='autoWidth')
-        gridOptions = gb.build()
-        AgGrid(df_aux, gridOptions=gridOptions, fit_columns_on_grid_load=True)
+        st.dataframe(df_aux)
 
  
     st.write('País')   
