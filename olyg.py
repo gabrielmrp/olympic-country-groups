@@ -87,6 +87,7 @@ def fill_groups(df_sym_cluster):
 
 if __name__ == "__main__": 
 
+    st.set_page_config(page_title="Perfis de Países de Acordo com o Desempenho Olímpico", page_icon="🥇")
     show = True
 
     st.markdown(
@@ -115,7 +116,8 @@ if __name__ == "__main__":
 
     """,
     unsafe_allow_html=True) 
-
+ 
+ 
     # Lê os nomes das categorias
     with open('config/categories.json', 'r', encoding='utf-8') as file:
         categories = json.load(file)
