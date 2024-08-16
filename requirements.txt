@@ -1,4 +1,4 @@
-altair==5.4.0
+altair==4.2.2
 astroid==3.2.4
 attrs==24.2.0
 blinker==1.8.2
@@ -12,6 +12,7 @@ colorama==0.4.6
 contourpy==1.2.1
 cycler==0.12.1
 dill==0.3.8
+entrypoints==0.4
 et-xmlfile==1.1.0
 fiona==1.9.6
 fonttools==4.53.1
@@ -49,6 +50,7 @@ pyogrio==0.9.0
 pyparsing==3.1.2
 pyproj==3.6.1
 python-dateutil==2.9.0.post0
+python-decouple==3.8
 pytz==2024.1
 referencing==0.35.1
 requests==2.32.3
@@ -61,11 +63,13 @@ shapely==2.0.5
 six==1.16.0
 smmap==5.0.1
 streamlit==1.37.1
+streamlit-aggrid==1.0.5
 tenacity==8.5.0
 threadpoolctl==3.5.0
 toml==0.10.2
 tomli==2.0.1
 tomlkit==0.13.0
+toolz==0.12.1
 tornado==6.4.1
 typing_extensions==4.12.2
 tzdata==2024.1
